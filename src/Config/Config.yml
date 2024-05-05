@@ -1,0 +1,24 @@
+# +----------------------------------------------------------------------------------------------+ #
+# |                                                                                              | #
+# |                                   MBOT © - 2023                                              | #
+# |                                     BY @MARKO                                                | #
+# |                                                                                              | #
+# +----------------------------------------------------------------------------------------------+ #
+
+status: "@Markoo <3"
+
+system_active:
+  ticket: true
+
+channels:
+  welcomeChannelId: "1155467975655174174"
+  ticketLogsChannelId: "1155467975655174174"
+
+category:
+  ticketCategoryId: "1160302471839748136"
+
+role:
+  staff_role: "1160302672851783701"
+
+command:
+  ping: "🧷 - Affiche la latence du Robot"

@@ -1,0 +1,13 @@
+# +----------------------------------------------------------------------------------------------+ #
+# |                                                                                              | #
+# |                                   MBOT © - 2023                                              | #
+# |                                     BY @MARKO                                                | #
+# |                                                                                              | #
+# +----------------------------------------------------------------------------------------------+ #
+
+system_desactivate: "> Ce système est actuellement désactivé !"
+no_permission: "> Vous n'avez pas les permissions pour faire ceci !"
+
+tickets:
+  close_ticket: "> :x: Fermeture du ticket dans quelques secondes.."
+  open_ticket: "Ouverture du ticket, %channel%" # %channel% <== TAG LE CHANNEL

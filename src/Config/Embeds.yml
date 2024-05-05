@@ -1,0 +1,130 @@
+# +----------------------------------------------------------------------------------------------+ #
+# |                                                                                              | #
+# |                                   MBOT © - 2023                                              | #
+# |                                     BY @MARKO                                                | #
+# |                                                                                              | #
+# +----------------------------------------------------------------------------------------------+ #
+
+# EXEMPLE EMBED:
+#    title: "Test Ticket"
+#    description: "Description du Ticket"
+#    timestamp: false # TRUE OU FALSE
+#    color: "#FFFFFF" # "DEFAULT" ; "ERROR" ; "DEFAULT" OU UN CHIFFRE HEXA
+#    fields:
+#      - name: "Field 1"
+#        value: "Value 1"
+#      - name: "Field 2"
+#        value: "Value 2"
+
+default_embed:
+  footer:
+    default_name: "MBot © 2024"
+    default_image: ""
+
+  color:
+    success: "#00FF0D"
+    error: "#e0123b"
+    default: "A829CD"
+
+welcome:
+  title: "💜・Nouvel arrivage !"
+  description: "**%username%** vient de nous rejoindre !\nN'hesitez pas à **découvrir le serveur**.\n\n> Actuellement, le serveur compte **%memberCount% membres**."
+  timestamp: true
+  color: "default"
+
+tickets:
+  name_channel: "🎫・%user%" # %user% <== RETURN LE NOM DU JOUEUR
+
+  setup:
+    title: "🎫・Création de ticket"
+    description: "> Besoin de **commander** ou avoir un **devis** ?\n> **Ouvrez un ticket !**\n\n**`🔔` • Veuillez fournir un cahier des charges __complet__ !**"
+    color: "default"
+    timestamp: true
+
+  select-menu:
+    placeholder: "Sélectionner une catégorie"
+    option1:
+      name: "Développement"
+      emoji: "🌃" # EMOJI OR NULL
+    option2:
+      name: "Test de Tickets"
+      emoji: "💎"
+
+  in_ticket:
+    title: "🎫・Ticket de %username%"
+    description: "> Bienvenue dans votre **ticket** ! Ici, veuillez être __**précis**__ dans votre demande."
+    timestamp: true # TRUE OU FALSE
+    color: "default" # "DEFAULT" ; "ERROR" ; "DEFAULT" OU UN CHIFFRE HEXA
+    fields:
+      - name: "Nom d'utilisateur :"
+        value: "%username%"
+        inline: true
+      - name: "Date d'ouverture :"
+        value: "%createdDate%"
+        inline: true
+      - name: "Catégorie :"
+        value: "%name_category%"
+        inline: true
+
+  button_close:
+    name: "Fermer le Ticket"
+    emoji: "🔒"
+
+  logs:
+    title: "🎫・Fermeture de ticket"
+    timestamp: true
+    color: "default"
+    fields:
+      - name: "Ouvert par :"
+        value: "%userMention% (%username%)"
+        inline: false
+      - name: "Date d'ouverture :"
+        value: "%createdDate%"
+        inline: false
+      - name: "Date de Fermeture :"
+        value: "%closedDate%"
+        inline: false
+
+  add_command:
+    title: "🎫・Ajout d'un membre"
+    description: "Un membre vient d'être ajouté dans le Ticket"
+    timestamp: true
+    color: "success"
+    fields:
+      - name: "Ajouté(e) par :"
+        value: "%userMention% (%username%)"
+        inline: true
+      - name: "Personne ajouté(e) :"
+        value: "%targetMention% (%targetUsername%)"
+        inline: true
+
+  remove_command:
+    title: "🎫・Remove d'un membre"
+    description: "Un membre vient d'être enlevé dans le Ticket"
+    timestamp: true
+    color: "success"
+    fields:
+      - name: "Enlevé(e) par :"
+        value: "%userMention% (%username%)"
+        inline: true
+      - name: "Personne enlevé(e) :"
+        value: "%targetMention% (%targetUsername%)"
+        inline: true
+
+  history_command:
+    title: "🎫・Historique du Ticket #%id%"
+    timestamp: true
+    color: "default"
+    fields:
+      - name: "Ouvert Par :"
+        value: "<@%userOpenTicket%> (%userNameOpenTicket%)"
+        inline: false
+      - name: "Date d'ouverture:"
+        value: "%registeredAt%"
+        inline: false
+      - name: "Date de fermeture:"
+        value: "%closedDate%"
+        inline: false
+      - name: "Transcript URL:"
+        value: "%transcriptUrl%"
+        inline: false
